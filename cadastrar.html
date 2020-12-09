@@ -1,71 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <title>OLHAQUI - Cadastrar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Projeto Olhaqui - Cadastrar</title>
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-    <header id="container">
-        <h1 class="logotipo"><a href="index.html"><img src="img/logo.png" alt="Projeto Olhaqui"></a></h1>
-        <nav class="menu-opcoes">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projeto</a></li>
-                <li><a href="#">Equipe</a></li>
-                <li><a href="#">Entrar</a></li>
-                <li><a href="#">Cadastre-se</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="formulario">
-        <form action="/#" method="post">
-                <div>
-                  <label for="email">E-mail:</label>
-                  <input type="email" id="email" name="user_email">
-                </div>
-                <div>
-                    <label for="password">Senha:</label>
-                    <input type="password" id="user_password" name="user_password">
-                </div>
-                <div>
-                    <label for="password">Confirmar Senha:</label>
-                    <input type="password" id="user_password" name="user_password">
-                </div>
-                <div>
-                  <label for="name">Nome:</label>
-                  <input type="text" id="name" name="user_name">
-                </div>
-                <div>
-                    <label for="genre">Sexo:</label>
-                  <select name="sexo" id="user_genre">
-                      <option value="f">Feminino</option>
-                      <option value="m">Masculino</option>
-                  </select>
-                </div>
-                <div>
-                    <label for="dateOfBirth">Data Nascimento:</label>
-                    <input type="date" name="dateOfBirth" id="user_birthday">
-                </div>
-                <div>
-                    <label for="tel">Telefone:</label>
-                    <input type="tel" name="tel" id="user_tel">
-                </div>
-                <div>
-                    <label for="cep">CEP:</label>
-                    <input type="text" name="cep" id="user_address">
-                </div>
-                <div>
-                    <label for="logradouro">Logradouro</label>
-                    <input type="text" name="logradouro" id="user_address">
-                </div>
-                <div>
 
+<body>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
+                href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="/index.html" class="w3-bar-item w3-button w3-teal"><i
+                    class="fa fa-home w3-margin-right"></i>Home</a>
+            <a href="/project.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Projeto</a>
+            <a href="/team.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Equipe</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Entrar</a>
+            <a href="/cadastrar.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Cadastrar</a>
+            <a href="/contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contato</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-button" title="Notifications">Reclamar <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                    <a href="#" class="w3-bar-item w3-button">Consultar</a>
+                    <a href="#" class="w3-bar-item w3-button">Criar</a>
+                    <a href="#" class="w3-bar-item w3-button">Ver</a>
+                    <a href="#" class="w3-bar-item w3-button">Deletar</a>
                 </div>
-        </form>
+            </div>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i
+                    class="fa fa-search"></i></a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+            <a href="/project.html" class="w3-bar-item w3-button">Projeto</a>
+            <a href="/team.html" class="w3-bar-item w3-button">Equipe</a>
+            <a href="/login.html" class="w3-bar-item w3-button">Entrar</a>
+            <a href="/cadastrar.html" class="w3-bar-item w3-button">Cadastrar</a>
+            <a href="/contact.html" class="w3-bar-item w3-button">Contato</a>
+            <a href="#" class="w3-bar-item w3-button">Pesquisar</a>
+        </div>
     </div>
+
+    <!-- Cadastro Container -->
+    <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+        <div class="w3-row">
+            <div class="w3-col m5">
+                <div class="w3-padding-16">
+                    <span class="w3-xlarge w3-border-teal w3-bottombar">Cadastre-se</span>
+                </div>
+                <h3>OLHAQUI</h3>
+                <p>
+                    Este formulário tem como objetivo obter informações do cidadão,
+                    para que possa realizar as comunicações dentro da plataforma.
+                </p>
+                <p>
+                    Qualquer duvida entre em contato na seção de <a href="contact.html">contato</a>
+                </p>
+            </div>
+            <div class="w3-col m7">
+                <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+                    <div class="w3-section">
+                        <label>Nome</label>
+                        <input class="w3-input" type="text" name="Name" required>
+                    </div>
+                    <div class="w3-section">
+                        <label>E-mail</label>
+                        <input class="w3-input" type="text" name="Email" required>
+                    </div>
+                    <div class="w3-section">
+                        <label for="password">Senha:</label>
+                        <input class="w3-input" type="password" id="user_password" name="user_password">
+                    </div>
+                    <div class="w3-section">
+                        <label for="password">Confirmar Senha:</label>
+                        <input class="w3-input" type="password" id="user_password" name="user_password">
+                    </div>
+                    <div class="w3-section">
+                        <label for="genre">Sexo:</label>
+                        <select class="w3-input" name="sexo" id="user_genre">
+                            <option value="f">Feminino</option>
+                            <option value="m">Masculino</option>
+                        </select>
+                    </div>
+                    <div class="w3-section">
+                        <label for="dateOfBirth">Data Nascimento:</label>
+                        <input class="w3-input" type="date" name="dateOfBirth" id="user_birthday">
+                    </div>
+                    <div class="w3-section">
+                        <label for="tel">Telefone:</label>
+                        <input class="w3-input" type="tel" name="tel" id="user_tel">
+                    </div>
+                    <div class="w3-section">
+                        <label for="cep">CEP:</label>
+                        <input class="w3-input" type="text" name="cep" id="user_address">
+                    </div>
+                    <div class="w3-section">
+                        <label for="logradouro">Logradouro</label>
+                        <input class="w3-input" type="text" name="logradouro" id="user_address">
+                    </div>
+                    <input class="w3-check" type="checkbox" checked name="Like">
+                    <label>Gostei. Quero participar!</label>
+                    <button type="submit" class="w3-bttuon w3-right w3-theme">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+    <h4>Siga-nos</h4>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i
+        class="fa fa-google-plus"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+    <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i
+        class="fa fa-linkedin"></i></a>
+    <p>Powered by <a href="/team.html" target="_blank">OLHAQUI</a></p>
+
+    <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+      <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+      <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+          <i class="fa fa-chevron-circle-up"></i></span></a>
+    </div>
+  </footer>    
 </body>
 </html>

@@ -2,9 +2,9 @@
 <html lang="pt-br">
 
 <head>
-  <title>Projeto OLHAQUI</title>
+  <title>OLHAQUI Home</title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_go8jGoJL2GRoGNkX9Tr-ZT7VxHjmpY8&callback=initMap&libraries=&v=weekly"defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/main.css">
@@ -54,7 +54,7 @@
     <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
       <a href="/project.html" class="w3-bar-item w3-button">Projeto</a>
       <a href="/team.html" class="w3-bar-item w3-button">Equipe</a>
-      <a href="/login.html" class="w3-bar-item w3-button">Entrar/a>
+      <a href="/login.html" class="w3-bar-item w3-button">Entrar</a>
         <a href="/cadastrar.html" class="w3-bar-item w3-button">Cadastrar</a>
         <a href="/contact.html" class="w3-bar-item w3-button">Contato</a>
         <a href="#" class="w3-bar-item w3-button">Pesquisar</a>
@@ -65,84 +65,10 @@
   <div class="w3-display-container w3-animate-opacity">
     <img src="/img/logo.png" alt="logo_olhaqui">
     <div class="w3-container w3-display-bottomleft w3-margin-bottom">
-      <a href="/project.html" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Ir para pagina do projeto">CONHEÇA O PROJETO</a>
+      <a href="project.html" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Ir para pagina do projeto">CONHEÇA O PROJETO</a>
+      <button onclick="document.getElementById('work');" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Ir para pagina do projeto">CONHEÇA O PROJETO</button>
     </div>
   </div>
-
-  <!-- Modal
-<div id="id01" class="w3-modal">
-  <div class="w3-modal-content w3-card-4 w3-animate-top">
-    <header class="w3-container w3-teal w3-display-container">
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
-      <h4>Oh snap! We just showed you a modal..</h4>
-      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
-    </header>
-    <div class="w3-container">
-      <p>Cool huh? Ok, enough teasing around..</p>
-      <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
-    </div>
-    <footer class="w3-container w3-teal">
-      <p>Modal footer</p>
-    </footer>
-  </div>
-</div> -->
-
-  <!-- Work Row -->
-  <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
-
-    <div class="w3-quarter">
-      <h2>Nosso Trabalho</h2>
-      <p>O projeto visa o desenvolvimento de um software facilitador na resolução de problemas
-        urbanos entre os moradores e a prefeitura de São Vicente. Provendo a possibilidade
-        dos residentes notificarem o órgão responsável da prefeitura sobre a situção da
-        cidade. A prefeitura por sua vez poderá atender melhor a população através desse
-        canal de comunicação.</p>
-    </div>
-
-    <div class="w3-quarter">
-      <div class="w3-card w3-white">
-        <img src="/img/residuos-praia.png" alt="Reclame Cidadão" style="width:100%">
-        <div class="w3-container">
-          <h3>Reclame!</h3>
-          <h4>Seja Cidadão</h4>
-          <p>Nossa plataforma </p>
-          <p>foi desenvolvida </p>
-          <p>pensando no Cidadão.</p>
-          <p>Fique a vontade, </p>
-          <p><a href="/cadastrar.html"><b>Cadastre-se aqui! </b></a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="w3-quarter">
-      <div class="w3-card w3-white">
-        <img src="/img/fila-hospital.png" alt="Responsabilidade" style="width:100%">
-        <div class="w3-container">
-          <h3>Responsabilidade!</h3>
-          <h4>Poder Publico</h4>
-          <p>Nossa plataforma</p>
-          <p>vem para ajudar</p>
-          <p>funcionalidades </p>
-          <p>pensadas para auxiliar</p>
-          <p>na gestão de problemas.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="w3-quarter">
-      <div class="w3-card w3-white">
-        <img src="/img/logo-branco.jpeg" alt="OLHAQUI" style="width: 100%;">
-        <div class="w3-container">
-          <h3>OLHAQUI</h3>
-          <h4>Tecnologia</h4>
-          <p>Sustentabilidade</p>
-          <p>Acessibilidade</p>
-          <p>Comunicação</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Footer -->
   <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
     <h4>Siga-nos</h4>
@@ -184,6 +110,18 @@
       } else {
         x.className = x.className.replace(" w3-show", "");
       }
+    }
+
+    "use strict";
+    let map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: {
+          lat: -34.397,
+          lng: 150.644
+        },
+        zoom: 8
+      });
     }
   </script>
 

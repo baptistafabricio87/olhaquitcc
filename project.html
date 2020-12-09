@@ -9,67 +9,112 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <!-- Pricing Row -->
-    <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
-        <h2>PRICING</h2>
-        <p>Choose a pricing plan that fits your needs.</p><br>
-        <div class="w3-third w3-margin-bottom">
-          <ul class="w3-ul w3-border w3-hover-shadow">
-            <li class="w3-theme">
-              <p class="w3-xlarge">Basic</p>
-            </li>
-            <li class="w3-padding-16"><b>10GB</b> Storage</li>
-            <li class="w3-padding-16"><b>10</b> Emails</li>
-            <li class="w3-padding-16"><b>10</b> Domains</li>
-            <li class="w3-padding-16"><b>Endless</b> Support</li>
-            <li class="w3-padding-16">
-              <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
-              <span class="w3-opacity">per month</span>
-            </li>
-            <li class="w3-theme-l5 w3-padding-24">
-              <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-            </li>
-          </ul>
+    <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
+        href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+      <a href="/index.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+      <a href="/project.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Projeto</a>
+      <a href="/team.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Equipe</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Entrar</a>
+      <a href="/cadastrar.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Cadastrar</a>
+      <a href="/contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contato</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button" title="Notifications">Reclamar <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+          <a href="#" class="w3-bar-item w3-button">Consultar</a>
+          <a href="#" class="w3-bar-item w3-button">Criar</a>
+          <a href="#" class="w3-bar-item w3-button">Ver</a>
+          <a href="#" class="w3-bar-item w3-button">Deletar</a>
         </div>
-
-        <div class="w3-third w3-margin-bottom">
-          <ul class="w3-ul w3-border w3-hover-shadow">
-            <li class="w3-theme-l2">
-              <p class="w3-xlarge">Pro</p>
-            </li>
-            <li class="w3-padding-16"><b>25GB</b> Storage</li>
-            <li class="w3-padding-16"><b>25</b> Emails</li>
-            <li class="w3-padding-16"><b>25</b> Domains</li>
-            <li class="w3-padding-16"><b>Endless</b> Support</li>
-            <li class="w3-padding-16">
-              <h2 class="w3-wide"><i class="fa fa-usd"></i> 25</h2>
-              <span class="w3-opacity">per month</span>
-            </li>
-            <li class="w3-theme-l5 w3-padding-24">
-              <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-            </li>
-          </ul>
-        </div>
-
-        <div class="w3-third w3-margin-bottom">
-          <ul class="w3-ul w3-border w3-hover-shadow">
-            <li class="w3-theme">
-              <p class="w3-xlarge">Premium</p>
-            </li>
-            <li class="w3-padding-16"><b>50GB</b> Storage</li>
-            <li class="w3-padding-16"><b>50</b> Emails</li>
-            <li class="w3-padding-16"><b>50</b> Domains</li>
-            <li class="w3-padding-16"><b>Endless</b> Support</li>
-            <li class="w3-padding-16">
-              <h2 class="w3-wide"><i class="fa fa-usd"></i> 50</h2>
-              <span class="w3-opacity">per month</span>
-            </li>
-            <li class="w3-theme-l5 w3-padding-24">
-              <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-            </li>
-          </ul>
-        </div>
+      </div>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i
+          class="fa fa-search"></i></a>
     </div>
 
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+      <a href="/project.html" class="w3-bar-item w3-button">Projeto</a>
+      <a href="/team.html" class="w3-bar-item w3-button">Equipe</a>
+      <a href="/login.html" class="w3-bar-item w3-button">Entrar</a>
+        <a href="/cadastrar.html" class="w3-bar-item w3-button">Cadastrar</a>
+        <a href="/contact.html" class="w3-bar-item w3-button">Contato</a>
+        <a href="#" class="w3-bar-item w3-button">Pesquisar</a>
+    </div>
+  </div>
+      <!-- Work Row -->
+  <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+    <div class="w3-quarter">
+      <h2>Nosso Trabalho</h2>
+      <p>O projeto visa o desenvolvimento de um software facilitador na resolução de problemas
+        urbanos entre os moradores e a prefeitura de São Vicente. Provendo a possibilidade
+        dos residentes notificarem o órgão responsável da prefeitura sobre a situção da
+        cidade. A prefeitura por sua vez poderá atender melhor a população através desse
+        canal de comunicação.</p>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="w3-card w3-white">
+        <img src="/img/residuos-praia.png" alt="Reclame Cidadão" style="width:100%">
+        <div class="w3-container">
+          <h3>Reclame!</h3>
+          <h4>Seja Cidadão</h4>
+          <p>Nossa plataforma </p>
+          <p>foi desenvolvida </p>
+          <p>pensando no Cidadão.</p>
+          <p>Fique a vontade, </p>
+          <p><a href="/cadastrar.html" class="w3-button"><b>Cadastre-se aqui! </b></a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="w3-card w3-white">
+        <img src="/img/fila-hospital.png" alt="Responsabilidade" style="width:100%">
+        <div class="w3-container">
+          <h3>Responsabilidade!</h3>
+          <h4>Poder Publico</h4>
+          <p>Nossa plataforma</p>
+          <p>vem para ajudar</p>
+          <p>funcionalidades </p>
+          <p>pensadas para auxiliar</p>
+          <p>na gestão de problemas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="w3-card w3-white">
+        <img src="/img/logo-branco.jpeg" alt="OLHAQUI" style="width: 100%;">
+        <div class="w3-container">
+          <h3>OLHAQUI</h3>
+          <h4>Tecnologia</h4>
+          <p>Sustentabilidade</p>
+          <p>Acessibilidade</p>
+          <p>Comunicação</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+    <h4>Siga-nos</h4>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i
+        class="fa fa-google-plus"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+    <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i
+        class="fa fa-linkedin"></i></a>
+    <p>Powered by <a href="/team.html" target="_blank">OLHAQUI</a></p>
+
+    <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+      <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+      <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+          <i class="fa fa-chevron-circle-up"></i></span></a>
+    </div>
+  </footer>
   </body>
 </html>
